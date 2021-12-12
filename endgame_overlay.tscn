@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/boom.png" type="Texture" id=1]
+[ext_resource path="res://endgame_overlay_button.gd" type="Script" id=2]
+[ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -800.0
+margin_top = -480.0
+margin_right = 800.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = -68.0
+margin_right = 165.0
+margin_bottom = 68.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_right = 330.0
+margin_bottom = 172.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_right = 330.0
+margin_bottom = 94.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 98.0
+margin_right = 330.0
+margin_bottom = 112.0
+text = "You failed and left 624424 mines in the field"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 116.0
+margin_right = 330.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 1 )
+text = "Main menu"
+script = ExtResource( 2 )
