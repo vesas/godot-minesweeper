@@ -1,79 +1,40 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://fy6oucf65xmv"]
 
-[ext_resource path="res://images/title.png" type="Texture" id=1]
-[ext_resource path="res://exit_button.gd" type="Script" id=2]
-[ext_resource path="res://newgame_button.gd" type="Script" id=3]
-[ext_resource path="res://images/version.png" type="Texture" id=4]
-[ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-size = 32
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 32
-font_data = ExtResource( 5 )
+[ext_resource type="Texture2D" uid="uid://51kq35t4i81l" path="res://images/title.png" id="1"]
+[ext_resource type="Script" path="res://exit_button.gd" id="2"]
+[ext_resource type="Script" path="res://newgame_button.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://c2qosa4e62qdn" path="res://images/version.png" id="4"]
 
 [node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 100
-custom_constants/margin_top = 100
-custom_constants/margin_left = 100
-custom_constants/margin_bottom = 100
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 1500.0
-margin_bottom = 860.0
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 380.0
-margin_top = 226.0
-margin_right = 1020.0
-margin_bottom = 534.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
-margin_right = 640.0
-margin_bottom = 128.0
-texture = ExtResource( 1 )
+layout_mode = 2
+texture = ExtResource("1")
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 132.0
-margin_right = 640.0
-margin_bottom = 176.0
-custom_fonts/font = SubResource( 1 )
+layout_mode = 2
 text = "New game"
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 180.0
-margin_right = 640.0
-margin_bottom = 224.0
-custom_fonts/font = SubResource( 2 )
+layout_mode = 2
 text = "Options"
 
 [node name="Button3" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 228.0
-margin_right = 640.0
-margin_bottom = 272.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
 text = "Exit"
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer"]
-margin_top = 276.0
-margin_right = 640.0
-margin_bottom = 308.0
-texture = ExtResource( 4 )
+layout_mode = 2
+texture = ExtResource("4")
+stretch_mode = 2

@@ -8,13 +8,13 @@ var counter
 func _process(delta):
 	
 	if started:
-		counter = (OS.get_ticks_msec() - start_time) / 1000
+		counter = (Time.get_ticks_msec() - start_time) / 1000
 		
 		self.text = str(counter)
 	
 
 func _on_TileMap_level_started():
-	start_time = OS.get_ticks_msec()
+	start_time = Time.get_ticks_msec()
 	started = true
 
 
